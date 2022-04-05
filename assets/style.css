@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+}
+
+
+body {
+    min-height: 100vh;
+}
+
+.page-contents {
+    width: 80%;
+}
+
+@font-face {
+    font-family: Dream;
+    src: url('fnt/dream\ orphans.otf');
+}
+
+/* ---------- Sidemenu ---------- */
+
+
+.sidemenu {
+    background-color: #399E5A;
+    width: 20%;
+    padding: 30px;
+}
+
+.sidemenu h1 {
+    text-align: center;
+    font-family: Dream;
+    letter-spacing: 1pt;
+    font-size: 36pt;
+    color: #eee;
+}
+
+.sidemenu h1 i {
+    color: #26532B;
+    display: block;
+}
+
+.sidemenu h1 span {
+    display:block;
+    font-size: 24pt;
+}
+
+.sidemenu .dropdown {
+    display: none;
+}
+
+.sidemenu ul {
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    
+    color: #eee;
+}
+
+.sidemenu ul:not(.dropdown) {
+    padding: 20px 0;
+}
+
+.sidemenu ul.dropdown {
+    padding-left: 30px;
+}
+
+.sidemenu h2 {
+    border-bottom: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+}
+
+.sidemenu ul li {
+    padding: 10px 10px;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+.sidemenu ul i {
+    display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+    color: #26532B;
+}
+
+.sidemenu ul i.fa-caret-down, .sidemenu ul i.fa-caret-right {
+    margin-left: 10px;
+}
+
+.sidemenu li:hover{
+    background-color: #55ac72;
+    border-radius: 50px;
+    transition-duration: .3s;
+}
+
+.sidemenu a{
+    display:block;
+    color: inherit;
+    text-decoration: inherit;
+
+}
+
+/* ---------- Dashboard ---------- */
+
