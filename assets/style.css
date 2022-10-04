@@ -14,7 +14,44 @@ body {
 }
 
 .page-contents {
-    width: 80%;
+    padding: 40px;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    font-size: 11pt;
+}
+
+.page-contents h1 {
+    font-family: Dream;
+    letter-spacing: 3px;
+    color:#26532B;
+}
+
+.data-table {
+    border-spacing: 4px;
+    width: 100%;
+}
+
+.data-table th {
+    background-color: #26532B;
+    color: white;
+    font-family: Dream;
+    letter-spacing: 3px;
+}
+
+.data-table td {
+    background-color: #eee;
+    transition-duration: 0.5s;
+}
+
+.data-table td:hover {
+    background-color: #ddd;
+    transition-duration: 0s;
+}
+
+.data-table th, .data-table td {
+    padding: 10px 5px;
+    border-radius: 6px;
 }
 
 @font-face {
@@ -107,3 +144,69 @@ body {
 
 /* ---------- Dashboard ---------- */
 
+
+
+
+/* ---------- Pet Search ---------- */
+
+#pets #search-box {
+    width: 25%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#pets #search-box input {
+    padding: 5px 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+}
+
+#pets #search-box input[type="text"] {
+    width: 78%;
+    border: 0;
+    background-color: #eee;
+
+}
+
+#pets #search-box input[type="submit"] {
+    width: 20%;
+    background-color: #399E5A;
+    color: white;
+    border: 0;
+
+}
+
+#pet-search-results .sex {
+    text-align: center;
+}
+
+#pet-search-results .sex .fa-mars{
+    color: #275DAD;
+}
+
+#pet-search-results .sex .fa-venus {
+    color: #EA526F;
+}
+
+#pet-search-results .edit {
+    text-align: center;
+    color: white;
+    background-color:#399E5A;
+    padding: 0;
+    transition-duration: 0.2s;
+}
+
+#pet-search-results .edit:hover {
+    background-color:#26532B;
+    transition-duration: 0.2s;
+}
+
+#pet-search-results .edit a {
+    padding: 10px 5px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    
+}

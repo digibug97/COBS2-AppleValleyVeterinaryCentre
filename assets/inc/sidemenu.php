@@ -16,7 +16,7 @@
         <li class="droptrigger" onclick="ManageDropdown(this, 'pets')"><i class="fa fa-paw" aria-hidden="true"></i>Pets/Patients<i class="fa fa-caret-right" aria-hidden="true"></i></li>
         <ul id="pets-dropdown" class="dropdown">
             <li><i class="fa fa-clock-o" aria-hidden="true"></i>Recent</li>
-            <li><i class="fa fa-search" aria-hidden="true"></i>Search</li>
+            <li><a href="petsearch.php"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
         </ul>
         <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Customers</a></li>
         <li><i class="fa fa-paperclip" aria-hidden="true"></i>Prescriptions</li>
