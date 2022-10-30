@@ -151,12 +151,31 @@ body {
 
 #pets #search-box {
     width: 25%;
+}
+
+#appointments #search-box {
+    width: 50%;
+}
+
+#appointments #search-box input[type="text"] {
+    width: 35%;
+}
+
+#appointments #search-box input[type="date"] {
+    width: 15%;
+}
+
+#appointments #search-box input[type="submit"], #appointments #search-box input[type="button"] {
+    width: 15%;
+}
+
+#search-box {
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
 }
 
-#pets #search-box input {
+#search-box input {
     padding: 5px 4px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 5px;
@@ -164,17 +183,22 @@ body {
 
 #pets #search-box input[type="text"] {
     width: 78%;
+
+}
+
+#search-box input[type="text"], #search-box input[type="date"] {
     border: 0;
     background-color: #eee;
-
 }
 
 #pets #search-box input[type="submit"] {
     width: 20%;
+}
+
+#search-box input[type="submit"], #search-box input[type="button"] {
     background-color: #399E5A;
     color: white;
     border: 0;
-
 }
 
 #pet-search-results .sex {
@@ -189,24 +213,42 @@ body {
     color: #EA526F;
 }
 
-#pet-search-results .edit {
+.data-table .button {
     text-align: center;
     color: white;
     background-color:#399E5A;
     padding: 0;
     transition-duration: 0.2s;
+    box-shadow: inset 0 0 9px rgba(0,0,0,0.2);
 }
 
-#pet-search-results .edit:hover {
+.data-table .button:hover {
     background-color:#26532B;
     transition-duration: 0.2s;
 }
 
-#pet-search-results .edit a {
+.data-table .view.button {
+    background-color: #fcf6bd;
+}
+
+.data-table .edit.button {
+    background-color: #A9DEF9;
+}
+
+.data-table .button a {
     padding: 10px 5px;
     width: 100%;
     height: 100%;
     display: block;
-    color: white;
+    color: #222;
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.7);
     
+}
+
+#appointment-search-results .fa-check {
+    color: green;
+} 
+
+#appointment-search-results .fa-times {
+    color: red;
 }

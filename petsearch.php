@@ -37,7 +37,8 @@ function Search($conn) {
             echo    "<td class='sex'>" . ($thisPatient['sex'] == "M" ? "<i class='fa fa-mars' aria-hidden='true'></i>" : "<i class='fa fa-venus' aria-hidden='true'></i>") . "</td>";
             echo    "<td>" . $thisPatient['address'] . "</td>";
             echo    "<td>" . $thisPatient['contactnumber'] . "</td>";
-            echo    "<td class='edit'><a href='petedit.php?id=" . $thisPatient['id'] . "'><i class='fa fa-pencil' aria-hidden='true'></i></a></td>";
+            echo    "<td class='view button'><a href='pet.php?id=" . $thisPatient['id'] . "'><i class='fa fa-eye' aria-hidden='true'></i></a></td>";
+            echo    "<td class='edit button'><a href='petedit.php?id=" . $thisPatient['id'] . "'><i class='fa fa-pencil' aria-hidden='true'></i></a></td>";
             echo "</tr>";
         }
     }

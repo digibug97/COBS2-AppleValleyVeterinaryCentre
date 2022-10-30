@@ -1,17 +1,24 @@
+<?php
+
+$today = date('Y-m-d');
+$weekStart = date('Y-m-d', strtotime('monday this week'));
+$weekEnd = date('Y-m-d', strtotime('sunday this week'));
+?>
+
 <div class="sidemenu">
     <h1>Apple Valley<i class="fa fa-pagelines" aria-hidden="true"></i><span>Veterinary Centre</span></h1>
 
     <ul>
-        <li><i class="fa fa-area-chart" aria-hidden="true"></i>Dashboard</li>
+        <li><a href="dashboard.php"><i class="fa fa-area-chart" aria-hidden="true"></i>Dashboard</a></li>
     </ul>
 
     <h2>Patients & Care</h2>
     <ul>
         <li class="droptrigger" onclick="ManageDropdown(this, 'appointments')"><i class="fa fa-calendar" aria-hidden="true"></i>Appointments<i class="fa fa-caret-right" aria-hidden="true"></i></li>
         <ul id="appointments-dropdown" class="dropdown">
-            <li><a href="todays-appointments.php"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Today</a></li>
-            <li><a href="weeks-appointments.php"><i class="fa fa-calendar-o" aria-hidden="true"></i>This Week</a></li>
-            <li><a href="search-appointments.php"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
+            <li><a href="appointments.php?from=<?php echo $today;?>&to=<?php echo $today;?>"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Today</a></li>
+            <li><a href="appointments.php?from=<?php echo $weekStart;?>&to=<?php echo $weekEnd;?>"><i class="fa fa-calendar-o" aria-hidden="true"></i>This Week</a></li>
+            <li><a href="appointments.php"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
         </ul>
         <li class="droptrigger" onclick="ManageDropdown(this, 'pets')"><i class="fa fa-paw" aria-hidden="true"></i>Pets/Patients<i class="fa fa-caret-right" aria-hidden="true"></i></li>
         <ul id="pets-dropdown" class="dropdown">
