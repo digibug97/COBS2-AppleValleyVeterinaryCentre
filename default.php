@@ -61,7 +61,7 @@
             
         </div>
         <div id="footer">
-            <a href="login.php">Staff Portal</a>
+            <a href="dashboard.php">Staff Portal</a>
         </div>
     </body>
 </html>

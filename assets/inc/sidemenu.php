@@ -16,6 +16,7 @@ $weekEnd = date('Y-m-d', strtotime('sunday this week'));
     <ul>
         <li class="droptrigger" onclick="ManageDropdown(this, 'appointments')"><i class="fa fa-calendar" aria-hidden="true"></i>Appointments<i class="fa fa-caret-right" aria-hidden="true"></i></li>
         <ul id="appointments-dropdown" class="dropdown">
+            <li><a href="appointmentadd.php"><i class="fa fa-plus" aria-hidden="true"></i>Create New</a></li>    
             <li><a href="appointments.php?from=<?php echo $today;?>&to=<?php echo $today;?>"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Today</a></li>
             <li><a href="appointments.php?from=<?php echo $weekStart;?>&to=<?php echo $weekEnd;?>"><i class="fa fa-calendar-o" aria-hidden="true"></i>This Week</a></li>
             <li><a href="appointments.php"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
