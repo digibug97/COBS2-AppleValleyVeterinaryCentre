@@ -13,6 +13,10 @@ body {
     min-height: 100vh;
 }
 
+.tata {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* Home page */
 
 #home #header {
@@ -196,6 +200,66 @@ body {
     border-radius: 6px;
 }
 
+#create-new {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #6dbf88;
+    box-shadow: 0 0 8px #444;
+    border-radius: 6px;
+    display: flex;
+}
+
+#create-new > div {
+    width: 50%;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+#create-new h2 {
+    text-align: center;
+    color: #c7ffda;
+}
+
+#create-new label {
+    padding: 20px 0 5px 0;
+    width: 100%;
+    display: block;
+    font-family: Verdana;
+}
+
+#create-new input, #create-new select, #create-new textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    border-radius: 3px;
+    background-color: #eee;
+}
+
+#create-new textarea {
+    resize: vertical;
+}
+
+#create-new input[type="submit"] {
+    margin-top: 30px;
+    background-color: #222;
+    color: white;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+}
+
+#create-new input[type="submit"]:hover {
+    background-color: #99e0a2;
+    color: black;
+    box-shadow: 0 0 5px #111;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
 @font-face {
     font-family: Dream;
     src: url('fnt/dream\ orphans.otf');
@@ -284,6 +348,21 @@ body {
 
 }
 
+
+
+
+.sex .fa-mars{
+    color: #275DAD;
+}
+
+.sex .fa-venus {
+    color: #EA526F;
+}
+
+
+
+
+
 /* ---------- Dashboard ---------- */
 
 
@@ -347,13 +426,6 @@ body {
     text-align: center;
 }
 
-#pet-search-results .sex .fa-mars{
-    color: #275DAD;
-}
-
-#pet-search-results .sex .fa-venus {
-    color: #EA526F;
-}
 
 .data-table .button {
     text-align: center;
@@ -393,4 +465,90 @@ body {
 
 #appointment-search-results .fa-times {
     color: red;
+}
+
+/* ----- Appointment View ----- */
+
+#appointment p, #appointment li {
+    margin: 5px 0;
+}
+
+#appointment .page-contents > .flex-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+#appointment .page-contents > .flex-container > div {
+    width: 31%;   
+    padding: 15px;
+    border-radius: 6px;
+}
+
+#appointment h2 {
+    padding-bottom: 20px;
+}
+
+#appointment #appointment-pet {
+    background-color: #6dbf88;   
+    box-shadow: 0 0 8px #444;
+    color: white;
+}
+
+#appointment-pet h2 {
+    color:rgba(255, 255, 255, 0.5);  
+}
+
+#appointment-info h2, #appointment-treatments h2 {
+    color: rgba(0,0,0,0.15);
+}
+
+#appointment-pet .name {
+    font-weight: bold;
+}
+
+#appointment-pet .contact {
+    padding-top: 20px;
+}
+
+#appointment-info, #appointment-treatments {
+    background-color: #ddd;
+    box-shadow: 0 0 8px #999;
+    color: rgb(54, 54, 54);
+}
+
+#appointment-info h3 {
+    font-size: 11pt;
+}
+
+#appointment-info h3:not(:first-of-type) {
+    padding-top: 15px;
+}
+
+#appointment-treatments ul {
+    list-style-type: none;
+}
+
+#appointment-treatments .fa-check {
+    color: rgba(0,0,0,0.4);
+}
+
+#appointment-treatments .button {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    background-color: #ccc;
+    text-align: center;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition-duration: 0.2s;
+}
+
+#appointment-treatments .button:hover {
+    background-color: #6cad82;
+    color: white;
+    transition-duration: 0.2s;
 }

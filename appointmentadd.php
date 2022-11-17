@@ -2,6 +2,8 @@
 
 include "assets/inc/database_connection.php";
 
+session_start();
+
 function display_pets($conn) {
     $sqlPets = "SELECT id, name FROM pet ORDER BY name ASC";
     $rsPets = mysqli_query($conn, $sqlPets);
@@ -30,29 +32,39 @@ function display_vets($conn) {
     <body id="appointments" class="flex-container">
         <?php include "assets/inc/sidemenu.php";?>
         <div class="page-contents">
-            <h1>Appointments</h1>
-            <form id="create-new" method="POST" action="assets/proc/create_appointment_process.php">
-                <h2>Create New Appointment</h2>
+            <form id="create-new" method="POST" action="assets/proc/add_appointment_process.php">
+                <div style="background-image: url('assets/img/vet.png');">
 
-                <label for="datetime">Date/Time</label>
-                <input type="datetime-local" name="datetime"/>
+                </div>
+                <div>
+                    <h2>Create New Appointment</h2>
 
-                <label for="pet">Pet/Patient</label>
-                <select name="pet">
-                    <?php display_pets($conn);?>
-                </select>
+                    <label for="datetime">Date/Time</label>
+                    <input type="datetime-local" name="datetime"/>
 
-                <label for="reason">Reason for Visit</label>
-                <input type="text" name="reason"/>
+                    <label for="pet">Pet/Patient</label>
+                    <select name="pet">
+                        <?php display_pets($conn);?>
+                    </select>
 
-                <label for="vet">Consultant</label>
-                <select name="vet">
-                    <?php display_vets($conn);?>
-                </select>
+                    <label for="reason">Reason for Visit</label>
+                    <textarea name="reason"></textarea>
 
-                <input type="submit" value="Search"/>
+                    <label for="vet">Consultant</label>
+                    <select name="vet">
+                        <?php display_vets($conn);?>
+                    </select>
+
+                    <input type="submit" value="Save"/>
+                </div>
             </form>
         </div>
 
     </body>
 </html>
+
+<?php
+include "assets/inc/toast_hander.php";
+display_toast();
+
+?>
